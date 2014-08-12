@@ -35,8 +35,6 @@ in
 
 {
 
-  nixpkgs.config.allowUnfree = true;
-
   boot.supportedFilesystems = [ "zfs" ];
 
   imports =
@@ -98,7 +96,18 @@ in
 
   ];
 
-  nixpkgs.config.chromium.enableAdobeFlash = true;
+  nixpkgs.config = {
+
+    allowUnfree = true;
+
+    chromium = {
+      enableGoogleTalkPlugin = true;
+      enablePepperFlash = true; # adobe flash no longer works
+      enablePepperPDF = true;
+    };
+
+    firefox.enableAdobeFlash = true;
+  };
 
 
   # List services that you want to enable:
