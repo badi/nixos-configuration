@@ -120,6 +120,14 @@ in
     };
   };
 
+  # access to fonts
+  fonts = {
+    enableCoreFonts = true;
+    enableFontDir = true;
+    enableGhostscriptFonts = true;
+  };
+
+
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.badi = {
