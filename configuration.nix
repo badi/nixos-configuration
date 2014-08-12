@@ -91,6 +91,9 @@ in
      dropbox-cli
      gitAndTools.gitFull
 
+     xchat
+     irssi
+
   ];
 
   nixpkgs.config.chromium.enableAdobeFlash = true;
