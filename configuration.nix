@@ -173,6 +173,9 @@ in
 
      # every day at 6am
       "* 6 * * * root ${zfsSnapshotScript} ${zfsSnapshotPools} ${zfsSnapshotKeepCount} >>/var/log/zfs-snapshot.log 2>&1"
+
+      # every day at 6:30 am
+      "30 6 * * * root bash -l -c 'nix-channel --update'"
     ];
 
 
