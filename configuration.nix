@@ -65,6 +65,7 @@ in
     # system tools
     file
     lsof
+    psmisc
     which
 
     # network tools
