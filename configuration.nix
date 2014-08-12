@@ -76,6 +76,7 @@ in
 
     # web
     chromiumWrapper
+    firefoxWrapper
 
     # X11
 
