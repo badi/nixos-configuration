@@ -25,7 +25,7 @@ let
 
     $zfs snapshot -r $pool@$(date +%F-%T)
     $zfs list -t snapshot -o name \
-         | $grep tank@ \
+         | $grep $pool@ \
 	 | $sort -r \
 	 | $tail -n +$keep \
 	 | $xargs -n 1 $zfs destroy -r
