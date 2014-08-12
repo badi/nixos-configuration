@@ -77,8 +77,6 @@ in
     chromiumWrapper
 
     # X11
-    xlibs.libXinerama
-    xlibs.xineramaproto
 
     # XMonad
     # trayer
