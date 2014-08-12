@@ -83,8 +83,8 @@ in
     firefoxWrapper
 
     # X11
+    terminator
     synergy
-
 
     # XMonad
     # trayer
