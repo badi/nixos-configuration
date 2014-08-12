@@ -123,6 +123,7 @@ in
   services.xserver = {
     enable = true;
     videoDrivers = [ "nvidia" ];
+    vaapiDrivers = [ pkgs.vaapiVdpau ];
     displayManager.kdm.enable = true;
     desktopManager.kde4.enable = true;
     windowManager.xmonad = {
