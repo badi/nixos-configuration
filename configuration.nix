@@ -48,6 +48,12 @@ in
   boot.loader.grub.device = "/dev/sda";
 
   networking.hostName = "fangorn"; # Define your hostname.
+  networking.firewall = {
+    enable = true;
+    allowPing = true;
+    allowedTCPPorts = [ 24800 ]; # for synergy
+  };
+
 
   # Select internationalisation properties.
   i18n = {
@@ -77,12 +83,13 @@ in
     firefoxWrapper
 
     # X11
+    synergy
+
 
     # XMonad
     # trayer
     dmenu
     haskellPackages.xmobar
-    xlibs.libXinerama
 
     # misc
      tmux 
@@ -117,7 +124,6 @@ in
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
-
 
   # Enable the X11 windowing system.
   services.xserver = {
