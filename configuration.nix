@@ -139,6 +139,8 @@ in
     };
   };
 
+  hardware.opengl.driSupport32Bit = true;
+
   # access to fonts
   fonts = {
     enableCoreFonts = true;
