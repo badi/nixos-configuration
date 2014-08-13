@@ -129,7 +129,7 @@ in
   # services.printing.enable = true;
 
   # Enable the X11 windowing system.
-  services.xserver = {
+  services.xserver = with import ./xserverSettings.nix; {
     enable = true;
     videoDrivers = [ "nvidia" ];
     vaapiDrivers = [ pkgs.vaapiVdpau ];
@@ -139,6 +139,14 @@ in
       enable = true;
       enableContribAndExtras = true;
     };
+
+    # # trying to get multihead with multi gpu to work
+    # inherit serverLayoutSection
+    #         deviceSection
+    #         monitorSection
+    #         screenSection
+    #         config;
+
   };
 
   hardware.opengl.driSupport32Bit = true;
