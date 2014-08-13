@@ -33,6 +33,16 @@ let
 	 | $xargs -n 1 $zfs destroy -r
     '';
 
+  zfsScrubScript = pkgs.writeScript "zfs-scrub" ''
+    $(${cronScriptHeader})
+
+    pool=$1
+
+    zpool=${pkgs.linuxPackages.zfs}/sbin/zpool
+
+    $zpool scrub $pool
+  '';
+
 in
 
 {
@@ -53,6 +63,9 @@ in
 
       # every day at 6:30 am
       "30 6 * * * root bash -l -c 'nix-channel --update'"
+
+      # every sunday at midnight
+      "0 0 * * * root ${zfsScrubScript} ${zfsRootPool} >>/dev/log/zfs-scrub.log 2>&1"
     ];
 
 }
