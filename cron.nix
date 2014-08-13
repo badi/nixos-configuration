@@ -4,12 +4,17 @@
 
 let
 
+  cronScriptHeader = pkgs.writeScript "cron-script-header" ''
+    ${pkgs.coreutils}/bin/echo "=================================="
+    ${pkgs.coreutils}/bin/date
+  '';
+
   zfsSnapshotKeepCount = "90";
   zfsSnapshotPools = "tank";
 
   zfsSnapshotScript = pkgs.writeScript "zfs-snapshot" ''
-    ${pkgs.coreutils}/bin/echo "==================================="
-    ${pkgs.coreutils}/bin/date
+    $(${cronScriptHeader})
+
     pool=$1
     keep=$2
 
