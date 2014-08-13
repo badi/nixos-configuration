@@ -86,6 +86,8 @@ in
     # X11
     terminator
     synergy
+    feh
+    xcompmgr
 
     # XMonad
     # trayer
