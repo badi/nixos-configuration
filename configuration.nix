@@ -71,6 +71,7 @@ in
     lsof
     psmisc
     which
+    hwdata
 
     # network tools
     lshw wget
