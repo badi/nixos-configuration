@@ -43,6 +43,7 @@
     psmisc
     which
     hwdata
+    iotop
 
     # network tools
     lshw wget
