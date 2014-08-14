@@ -45,6 +45,10 @@
     hwdata
     iotop
 
+    # nix-related tools
+    strategoPackages.strategoxt # pp-aterm for printing .drv files
+    nix-repl
+
     # network tools
     lshw wget
 
