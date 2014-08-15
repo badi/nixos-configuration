@@ -65,6 +65,16 @@
     feh
     xcompmgr
 
+    # GTK themes
+    gtk # for the themes
+    gtk-engine-murrine
+    gtk_engines
+    oxygen_gtk
+    lxappearance
+    gnome.gnomeicontheme
+    hicolor_icon_theme
+
+
     # XMonad
     # trayer
     dmenu
@@ -132,6 +142,15 @@
     enableCoreFonts = true;
     enableFontDir = true;
     enableGhostscriptFonts = true;
+    fonts = with pkgs; [
+      corefonts
+      dejavu_fonts
+      inconsolata
+      liberation_ttf
+      terminus_font
+      ttf_bitstream_vera
+      vistafonts
+    ];
   };
 
 
