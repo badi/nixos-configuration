@@ -45,6 +45,10 @@
     hwdata
     iotop
 
+    # compression tools
+    unzipNLS
+    zip
+
     # nix-related tools
     strategoPackages.strategoxt # pp-aterm for printing .drv files
     nix-repl
