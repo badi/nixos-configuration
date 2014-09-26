@@ -56,6 +56,10 @@
     # network tools
     lshw wget
 
+    # network filesystems
+    nfsUtils
+    cifs_utils
+
     # editors
     vim  emacs24-nox
 
