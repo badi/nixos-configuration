@@ -59,6 +59,10 @@
     # editors
     vim  emacs24-nox
 
+    # office work
+    libreoffice
+    texLiveFull
+
     # web
     chromiumWrapper
     firefoxWrapper
