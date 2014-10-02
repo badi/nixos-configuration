@@ -66,6 +66,7 @@
     # office work
     libreoffice
     texLiveFull
+    biber
     evince
 
     # web
