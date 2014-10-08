@@ -68,6 +68,7 @@
     texLiveFull
     biber
     evince
+    kde4.gwenview
 
     # web
     chromiumWrapper
