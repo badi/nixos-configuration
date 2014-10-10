@@ -69,6 +69,7 @@
     biber
     evince
     kde4.gwenview
+    ghostscriptX
 
     # web
     chromiumWrapper
