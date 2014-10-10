@@ -70,6 +70,7 @@
     evince
     kde4.gwenview
     ghostscriptX
+    inkscape
 
     # web
     chromiumWrapper
