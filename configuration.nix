@@ -124,6 +124,7 @@
 
 
   # List services that you want to enable:
+  programs.zsh.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
