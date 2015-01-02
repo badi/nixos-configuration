@@ -180,7 +180,7 @@
     home = "/home/badi";
     group = "users";
     extraGroups = [ "wheel" ];
-    useDefaultShell = true;
+    shell = "/run/current-system/sw/bin/zsh";
   };
 
   time.timeZone = "America/New_York";
