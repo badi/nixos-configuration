@@ -18,6 +18,7 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sda";
 
+  networking.hostId = "f125f099";
   networking.hostName = "fangorn"; # Define your hostname.
   networking.firewall = {
     enable = true;
@@ -73,8 +74,8 @@
     inkscape
 
     # web
-    chromiumWrapper
-    firefoxWrapper
+    chromium
+    firefox
 
     # X11
     terminator
