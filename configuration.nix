@@ -20,6 +20,7 @@
 
   networking.hostId = "f125f099";
   networking.hostName = "fangorn"; # Define your hostname.
+  networking.networkmanager.enable = true;
   networking.firewall = {
     enable = true;
     allowPing = true;
@@ -50,10 +51,6 @@
     unzipNLS
     zip
 
-    # nix-related tools
-    strategoPackages.strategoxt # pp-aterm for printing .drv files
-    nix-repl
-
     # network tools
     lshw wget
 
@@ -63,19 +60,6 @@
 
     # editors
     vim  emacs24-nox
-
-    # office work
-    libreoffice
-    texLiveFull
-    biber
-    evince
-    kde4.gwenview
-    ghostscriptX
-    inkscape
-
-    # web
-    chromium
-    firefox
 
     # X11
     terminator
@@ -93,36 +77,13 @@
     hicolor_icon_theme
 
 
-    # XMonad
-    # trayer
-    dmenu
-    haskellPackages.xmobar
-
     # misc
      tmux 
-     keepassx2
-     dropbox
-     dropbox-cli
      gitAndTools.gitFull
-
-     xchat
-     irssi
 
   ];
 
-  nixpkgs.config = {
-
-    allowUnfree = true;
-
-    chromium = {
-      enableGoogleTalkPlugin = true;
-      enablePepperFlash = true; # adobe flash no longer works
-      enablePepperPDF = true;
-    };
-
-    firefox.enableAdobeFlash = true;
-  };
-
+  nixpkgs.config.allowUnfree = true;
 
   # List services that you want to enable:
   programs.zsh.enable = true;
@@ -140,6 +101,7 @@
     vaapiDrivers = [ pkgs.vaapiVdpau ];
     displayManager.kdm.enable = true;
     desktopManager.kde4.enable = true;
+    desktopManager.xfce.enable = true;
     windowManager.xmonad = {
       enable = true;
       enableContribAndExtras = true;
@@ -179,7 +141,7 @@
     createHome = true;
     home = "/home/badi";
     group = "users";
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "networkmanager" ];
     shell = "/run/current-system/sw/bin/zsh";
   };
 
