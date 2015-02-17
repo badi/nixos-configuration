@@ -141,12 +141,14 @@
     createHome = true;
     home = "/home/badi";
     group = "users";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "docker"];
     shell = "/run/current-system/sw/bin/zsh";
   };
 
   time.timeZone = "America/New_York";
 
   services.cron = import ./cron.nix { inherit pkgs; };
+
+  virtualisation.docker.enable = true;
 
 }
