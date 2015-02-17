@@ -94,6 +94,8 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
+  services.virtualboxHost.enable = true;
+
   # Enable the X11 windowing system.
   services.xserver = with import ./xserverSettings.nix; {
     enable = true;
@@ -141,7 +143,7 @@
     createHome = true;
     home = "/home/badi";
     group = "users";
-    extraGroups = [ "wheel" "networkmanager" "docker"];
+    extraGroups = [ "wheel" "networkmanager" "docker" "vboxusers" ];
     shell = "/run/current-system/sw/bin/zsh";
   };
 
