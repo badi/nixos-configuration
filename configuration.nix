@@ -94,6 +94,15 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
+  services.udev.extraRules = ''
+    # Yubico u2f rules
+    # https://github.com/Yubico/libu2f-host/blob/master/70-u2f.rules
+    # this udev file should be used with udev 188 and newer
+    ACTION!="add|change", GOTO="u2f_end"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0113|0114|0115|0116|0120|0402|0403|0406|0407|0410", TAG+="uaccess"
+    LABEL="u2f_end"
+  '';
+
   services.virtualboxHost.enable = true;
 
   # Enable the X11 windowing system.
