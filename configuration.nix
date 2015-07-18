@@ -57,10 +57,6 @@
     hwdata
     iotop
 
-    # compression tools
-    unzipNLS
-    zip
-
     # network tools
     lshw wget
 
@@ -70,22 +66,6 @@
 
     # editors
     vim  emacs24-nox
-
-    # X11
-    terminator
-    synergy
-    feh
-    xcompmgr
-
-    # GTK themes
-    gtk # for the themes
-    gtk-engine-murrine
-    gtk_engines
-    oxygen_gtk
-    lxappearance
-    gnome.gnomeicontheme
-    hicolor_icon_theme
-
 
     # misc
      tmux 
@@ -98,11 +78,8 @@
   # List services that you want to enable:
   programs.zsh.enable = true;
 
-  # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = true;
 
   services.udev.extraRules = ''
     # Yubico u2f rules
@@ -112,10 +89,6 @@
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0113|0114|0115|0116|0120|0402|0403|0406|0407|0410", TAG+="uaccess"
     LABEL="u2f_end"
   '';
-
-  services.virtualboxHost.enable = true;
-
-  services.printing.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver = with import ./xserverSettings.nix; {
@@ -129,14 +102,6 @@
       enable = true;
       enableContribAndExtras = true;
     };
-
-    # # trying to get multihead with multi gpu to work
-    # inherit serverLayoutSection
-    #         deviceSection
-    #         monitorSection
-    #         screenSection
-    #         config;
-
   };
 
   hardware.opengl.driSupport32Bit = true;
