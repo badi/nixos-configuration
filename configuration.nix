@@ -6,6 +6,16 @@
 
 {
 
+  nix.binaryCaches = [
+    https://cache.nixos.org/
+    http://hydra.cryp.to
+  ];
+
+  nix.trustedBinaryCaches = [
+    https://cache.nixos.org/
+    http://hydra.cryp.to
+  ];
+
   boot.supportedFilesystems = [ "zfs" ];
 
   imports =
