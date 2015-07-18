@@ -115,6 +115,8 @@
 
   services.virtualboxHost.enable = true;
 
+  services.printing.enable = true;
+
   # Enable the X11 windowing system.
   services.xserver = with import ./xserverSettings.nix; {
     enable = true;
