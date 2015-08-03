@@ -115,7 +115,7 @@ in
   #    * * * * *
 
      # every day at 6am
-      "0 6 * * * ${zfsSnapshotJob}"
+      # "0 6 * * * ${zfsSnapshotJob}"
 
       # every day at 6:30 am
       "30 6 * * * ${nixChannelUpdateJob}"
