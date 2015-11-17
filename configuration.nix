@@ -37,6 +37,11 @@
     allowedTCPPorts = [ 24800 ]; # for synergy
   };
 
+  networking.nat.enable = true;
+  networking.nat.internalInterfaces = ["ve-+"];
+  networking.nat.externalInterface = "enp2s9";
+
+
 
   # Select internationalisation properties.
   i18n = {
