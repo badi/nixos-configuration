@@ -159,4 +159,6 @@
 
   virtualisation.docker.enable = true;
 
+  system.autoUpgrade.enable = true;
+
 }
