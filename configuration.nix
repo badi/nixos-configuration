@@ -76,6 +76,8 @@
      tmux 
      gitAndTools.gitFull
 
+    xscreensaver
+
   ];
 
   nixpkgs.config.allowUnfree = true;
