@@ -161,4 +161,12 @@
 
   system.autoUpgrade.enable = true;
 
+  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.package = pkgs.pulseaudioFull;
+  hardware.bluetooth.enable = true;
+
+  nixpkgs.config.packageOverrides = pkgs: {
+      bluez = pkgs.bluez5;
+  };
+
 }
