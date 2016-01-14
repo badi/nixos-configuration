@@ -85,7 +85,11 @@
   # List services that you want to enable:
   programs.zsh.enable = true;
 
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    passwordAuthentication = false;
+    permitRootLogin = "no";
+  };
   services.printing.enable = true;
 
   services.udev.extraRules = ''
